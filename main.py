@@ -142,6 +142,9 @@ class NPM(QtCore.QObject):
         output = output.decode("utf-8")
         j = json.loads(output)
         i = 0
+        if 'dependencies' not in j:
+            self.fetch_signal.emit(100)
+            return packages
         for package in j['dependencies'] if not outdated else j:
             if self._cache.has_package(self.name, package):
                 # if package['version'] != self._cache.get(self.name, package).version:
