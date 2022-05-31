@@ -1,18 +1,11 @@
 import dataclasses
 import json
 import os
-import random
-import sys
-import time
-
-import pexpect
-import requests
-from PyQt5 import QtWidgets, QtCore, QtGui
+from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtCore import QThread, QObject
 
 import password_box
 from main_window import Ui_MainWindow
-import bs4
 
 import subprocess
 import sys
