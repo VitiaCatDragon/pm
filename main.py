@@ -25,7 +25,7 @@ class CacheManager:
 
     def __init__(self):
         self.cache_file = "cache.json"
-        self.cache = {'pypi': [], 'npm': []}
+        self.cache = {'pypi': {}, 'npm': {}}
         if not os.path.isfile(self.cache_file):
             self.save()
         else:
